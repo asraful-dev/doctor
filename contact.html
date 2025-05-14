@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ডাঃ মোঃ আলমগীর হোসেন - শিশু সার্জন</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #198754;
+            --accent-color: #6610f2;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        
+        body {
+            font-family: 'Noto Sans Bengali', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(13, 110, 253, 0.9)), url('/api/placeholder/1200/600') center/cover no-repeat;
+            height: 80vh;
+            color: white;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            z-index: 10;
+        }
+        
+        .doctor-img {
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+        
+        .counter-box {
+            padding: 30px 20px;
+            border-radius: 10px;
+            background-color: var(--light-color);
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .counter-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .appointment-section {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0b5ed7;
+        }
+        
+        .specialties-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .specialties-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #e9ecef;
+        }
+        
+        .specialties-list li i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .youtube-thumbnail {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .youtube-thumbnail img {
+            transition: transform 0.3s ease;
+        }
+        
+        .youtube-thumbnail:hover img {
+            transform: scale(1.05);
+        }
+        
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="text-primary">ডাঃ মোঃ আলমগীর হোসেন</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">হোম</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="specialist.html">বিশেষজ্ঞতা</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">সেবাসমূহ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="video.html">ভিডিও</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">যোগাযোগ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-3" href="apointment.html">অ্যাপয়েন্টমেন্ট নিন</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4">যোগাযোগ করুন</h2>
+                    <p class="mb-4">আপনার যেকোনো প্রশ্ন বা জিজ্ঞাসার জন্য আমাদের সাথে যোগাযোগ করুন। আমরা সর্বদা আপনাকে সাহায্য করতে প্রস্তুত।</p>
+                    
+                    <div class="contact-info">
+                        <div class="d-flex mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-phone-alt fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">ফোন</h5>
+                                <p class="mb-0">+৮৮ ০১৭৫০১০৫৭৭৩</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fab fa-whatsapp fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">হোয়াটসঅ্যাপ</h5>
+                                <p class="mb-0">+৮৮ ০১৭৫০১০৫৭৭৩</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-envelope fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">ইমেইল</h5>
+                                <p class="mb-0">dr.alamgir@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-3">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-map-marker-alt fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">চেম্বার</h5>
+                                <p class="mb-0">পপুলার ডায়াগনস্টিক সেন্টার, ঢাকা</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-icons mt-4">
+                        <a href="https://www.youtube.com/@alamgirhossain3274" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/+8801750105773" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="bg-light p-4 rounded">
+                        <h4 class="fw-bold mb-4">অফিস সময়</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>সোমবার - বৃহস্পতিবার</td>
+                                        <td>সকাল ১০:০০ - দুপুর ০১:০০</td>
+                                    </tr>
+                                    <tr>
+                                        <td>শুক্রবার</td>
+                                        <td>বন্ধ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>শনিবার</td>
+                                        <td>বিকাল ০৪:০০ - সন্ধ্যা ০৭:০০</td>
+                                    </tr>
+                                    <tr>
+                                        <td>রবিবার</td>
+                                        <td>বিকাল ০৪:০০ - সন্ধ্যা ০৭:০০</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h5 class="fw-bold mb-3">অবস্থান</h5>
+                            <div class="rounded overflow-hidden">
+                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14608.039158573767!2d90.36556225320301!3d23.74703030875986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b33cffc3fb%3A0x4a826f475fd312af!2sDhanmondi%2C%20Dhaka%201205!5e0!3m2!1sen!2sbd!4v1747229521826!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="text-white mb-4">ডাঃ মোঃ আলমগীর হোসেন</h3>
+                    <p class="text-white-50 mb-4">শিশু সার্জারি বিশেষজ্ঞ, আধুনিক পদ্ধতিতে শিশুদের বিভিন্ন সার্জারি সেবা প্রদান করি।</p>
+                    <div class="social-icons">
+                        <a href="https://www.youtube.com/@alamgirhossain3274" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/+8801750105773" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-4">দ্রুত লিংক</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">হোম</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">বিশেষজ্ঞতা</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">সেবাসমূহ</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">ভিডিও</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">যোগাযোগ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">সেবাসমূহ</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">হার্নিয়া</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">অন্ডকোষ সমস্যা</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">হাইপোস্পাডিয়াস</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">এপেন্ডিসাইটিস</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">সুন্নতে খতনা</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">যোগাযোগ</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2"></i> পপুলার ডায়াগনস্টিক সেন্টার, ঢাকা
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone-alt me-2"></i> +৮৮ ০১৭৫০১০৫৭৭৩
+                        </li>
+                        <li class="mb-3">
+                            <i class="fab fa-whatsapp me-2"></i> +৮৮ ০১৭৫০১০৫৭৭৩
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-2"></i> dr.alamgir@example.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-secondary">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-white-50 mb-0">&copy; ২০২৫ ডাঃ মোঃ আলমগীর হোসেন। সর্বস্বত্ব সংরক্ষিত।</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-white-50 mb-0">
+                        <a href="#" class="text-white-50 text-decoration-none">গোপনীয়তা নীতি</a> | 
+                        <a href="#" class="text-white-50 text-decoration-none">শর্তাবলী</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

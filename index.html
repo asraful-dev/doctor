@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ডাঃ মোঃ আলমগীর হোসেন - শিশু সার্জন</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #198754;
+            --accent-color: #6610f2;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        
+        body {
+            font-family: 'Noto Sans Bengali', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(13, 110, 253, 0.9)), url('/api/placeholder/1200/600') center/cover no-repeat;
+            height: 80vh;
+            color: white;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            z-index: 10;
+        }
+        
+        .doctor-img {
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+        
+        .counter-box {
+            padding: 30px 20px;
+            border-radius: 10px;
+            background-color: var(--light-color);
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .counter-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .appointment-section {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0b5ed7;
+        }
+        
+        .specialties-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .specialties-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #e9ecef;
+        }
+        
+        .specialties-list li i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .youtube-thumbnail {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .youtube-thumbnail img {
+            transition: transform 0.3s ease;
+        }
+        
+        .youtube-thumbnail:hover img {
+            transform: scale(1.05);
+        }
+        
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="text-primary">ডাঃ মোঃ আলমগীর হোসেন</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">হোম</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="specialist.html">বিশেষজ্ঞতা</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">সেবাসমূহ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="video.html">ভিডিও</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">যোগাযোগ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-3" href="apointment.html">অ্যাপয়েন্টমেন্ট নিন</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 hero-content">
+                    <h1 class="display-4 fw-bold mb-3">ডাঃ মোঃ আলমগীর হোসেন</h1>
+                    <h2 class="h3 mb-4">জেনারেল ও ল্যাপারস্কপিক শিশু সার্জারি বিশেষজ্ঞ</h2>
+                    <p class="lead mb-4">আপনার শিশুর স্বাস্থ্য আমাদের অগ্রাধিকার। আধুনিক চিকিৎসা পদ্ধতি এবং অভিজ্ঞতার মাধ্যমে সেরা সেবা নিশ্চিত করি।</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-light btn-lg">আরও জানুন</a>
+                        <a href="#appointment" class="btn btn-success btn-lg">অ্যাপয়েন্টমেন্ট নিন</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center d-none d-md-block">
+                    <img src="https://scontent.fdac41-1.fna.fbcdn.net/v/t39.30808-6/409708071_368322139049685_6362523148766469238_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFBdT1B-JRtFv33sxrs8J-LzZIVkxUmLbPNkhWTFSYtsxVbKum1EkGuWc_P7XG8gmYS74EydCLZfKhJlkj2yg7g&_nc_ohc=_46ed-zKw-8Q7kNvwHfFZyc&_nc_oc=Adkk0e9AErN4nhxO57lXu53VS9FGBO-hSMiTmwgD56D2FhJuqVJ3T4ax6jwxdmK8-E4&_nc_zt=23&_nc_ht=scontent.fdac41-1.fna&_nc_gid=-CIJ1kQcYEm89tbGq4eDwQ&oh=00_AfI-ekjVM1Ew003C75pGKDmlRhTFusybveB2kHpFY3LJQA&oe=682A530B" alt="ডাঃ মোঃ আলমগীর হোসেন" class="img-fluid doctor-img mt-5" width="350">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 mb-4 mb-md-0">
+                    <img src="https://scontent.fdac41-1.fna.fbcdn.net/v/t39.30808-6/484177013_665555389326357_3518965556349566396_n.jpg?stp=c256.0.1536.1536a_cp6_dst-jpg_s206x206_tt6&_nc_cat=108&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeGu06_UDOW9ktLczj011VE-xx9bYslOe0PHH1tiyU57Q_0Vb_jcAP13bze0PQGRA0C94nNYSyykdtCSSTR5wbMc&_nc_ohc=tsZfaSm5L-EQ7kNvwF6QCXR&_nc_oc=Adld0tiNOkD7X4dWmFUJEYeMCOMJBasVq4PLFShrIlPRX5Pesct9KtEJNxXQ77QXst4&_nc_zt=23&_nc_ht=scontent.fdac41-1.fna&_nc_gid=iJ_3OXTmxm-7ZziKCX9Ikw&oh=00_AfLRHt2M6-3PCOPuFtF3S6X3ajTatpqI65Ep7BwNg715zg&oe=682A54F6" alt="ডাঃ মোঃ আলমগীর হোসেন" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-7">
+                    <div class="section-title mb-4">
+                        <h6 class="text-primary fw-bold">পরিচিতি</h6>
+                        <h2 class="fw-bold mb-0">ডাঃ মোঃ আলমগীর হোসেন</h2>
+                        <p class="text-muted">জেনারেল ও ল্যাপারস্কপিক শিশু সার্জারি বিশেষজ্ঞ</p>
+                    </div>
+                    <p class="mb-4">ডাঃ মোঃ আলমগীর হোসেন একজন অভিজ্ঞ শিশু সার্জন যিনি শিশুদের জটিল সার্জারি এবং চিকিৎসা সেবা প্রদানে বিশেষ দক্ষতা অর্জন করেছেন। তিনি আধুনিক ল্যাপারস্কপিক পদ্ধতিতে শিশুদের বিভিন্ন জটিল অপারেশন সফলভাবে সম্পন্ন করে থাকেন।</p>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h5 class="fw-bold mb-3">বিশেষজ্ঞতা</h5>
+                            <ul class="specialties-list">
+                                <li><i class="fas fa-check-circle"></i> হার্নিয়া</li>
+                                <li><i class="fas fa-check-circle"></i> অন্ডকোষে পানি</li>
+                                <li><i class="fas fa-check-circle"></i> অন্ডকোষ না থাকা</li>
+                                <li><i class="fas fa-check-circle"></i> হাইপোস্পাডিয়াস</li>
+                                <li><i class="fas fa-check-circle"></i> কিডনিতে সমস্যা</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="fw-bold mb-3">অন্যান্য সেবা</h5>
+                            <ul class="specialties-list">
+                                <li><i class="fas fa-check-circle"></i> এপেন্ডিসাইটিস</li>
+                                <li><i class="fas fa-check-circle"></i> কসমেটিক সুন্নতে খতনা</li>
+                                <li><i class="fas fa-check-circle"></i> ঠোঁট ও তালু কাটা</li>
+                                <li><i class="fas fa-check-circle"></i> যাবতীয় টিউমার</li>
+                                <li><i class="fas fa-check-circle"></i> পিত্তথলিতে পাথর</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-center">
+                        <a href="#" class="btn btn-primary me-3">আরও জানুন</a>
+                        <a href="https://wa.me/+8801750105773" class="btn btn-outline-success">
+                            <i class="fab fa-whatsapp me-2"></i> WhatsApp: 01750105773
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h6 class="text-primary fw-bold">আমাদের সেবাসমূহ</h6>
+                <h2 class="fw-bold">বিশেষায়িত চিকিৎসা সেবা</h2>
+                <p class="text-muted">আধুনিক পদ্ধতিতে শিশুদের জন্য উন্নত চিকিৎসা সেবা</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-4">
+                    <div class="service-card bg-white p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-notes-medical"></i>
+                        </div>
+                        <h4 class="mb-3">হার্নিয়া</h4>
+                        <p>শিশুদের হার্নিয়া সমস্যার আধুনিক ল্যাপারস্কপিক পদ্ধতিতে চিকিৎসা করা হয়। এতে ব্যথা কম হয় এবং দ্রুত সুস্থ হওয়া যায়।</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="col-md-4">
+                    <div class="service-card bg-white p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h4 class="mb-3">অন্ডকোষের সমস্যা</h4>
+                        <p>অন্ডকোষে পানি জমা, অন্ডকোষ না থাকা ইত্যাদি সমস্যাগুলির নির্ভুল ডায়াগনোসিস ও চিকিৎসা প্রদান করা হয়।</p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="col-md-4">
+                    <div class="service-card bg-white p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-kidneys"></i>
+                        </div>
+                        <h4 class="mb-3">কিডনি সমস্যা</h4>
+                        <p>শিশুদের কিডনিতে সৃষ্ট বিভিন্ন সমস্যা যেমন- পাথর, সংক্রমণ ইত্যাদি সমস্যার আধুনিক চিকিৎসা প্রদান করা হয়।</p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="col-md-4">
+                    <div class="service-card bg-white p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-procedures"></i>
+                        </div>
+                        <h4 class="mb-3">এপেন্ডিসাইটিস</h4>
+                        <p>এপেন্ডিসাইটিস এবং নাড়িতে প্যাচ সমস্যার ল্যাপারস্কপিক পদ্ধতিতে অপারেশন করা হয়, যা শিশুদের জন্য অত্যন্ত নিরাপদ।</p>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="col-md-4">
+                    <div class="service-card bg-white p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <h4 class="mb-3">ঠোঁট ও তালু কাটা</h4>
+                        <p>জন্মগত ঠোঁট ও তালু কাটা সমস্যার আধুনিক প্লাস্টিক সার্জারি পদ্ধতিতে চিকিৎসা করা হয়।</p>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="col-md-4">
+                    <div class="service-card bg-white p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-hands-holding-child"></i>
+                        </div>
+                        <h4 class="mb-3">কসমেটিক সুন্নতে খতনা</h4>
+                        <p>আধুনিক ও নিরাপদ পদ্ধতিতে কসমেটিক সুন্নতে খতনা সেবা প্রদান করা হয়, যাতে শিশুরা দ্রুত সুস্থ হয়।</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary btn-lg">সব সেবাসমূহ দেখুন</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="counter-box">
+                        <div class="counter-number">১০+</div>
+                        <p class="mb-0">বছরের অভিজ্ঞতা</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="counter-box">
+                        <div class="counter-number">২০০০+</div>
+                        <p class="mb-0">সফল অপারেশন</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="counter-box">
+                        <div class="counter-number">৩৩০+</div>
+                        <p class="mb-0">শিক্ষামূলক ভিডিও</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="counter-box">
+                        <div class="counter-number">৯৮%</div>
+                        <p class="mb-0">সন্তুষ্ট রোগী</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Videos Section -->
+     <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h6 class="text-primary fw-bold">শিক্ষামূলক ভিডিও</h6>
+                <h2 class="fw-bold">আমাদের ইউটিউব চ্যানেল</h2>
+                <p class="text-muted">শিশুদের বিভিন্ন রোগ সম্পর্কে জানতে আমাদের ভিডিও দেখুন</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Video 1 -->
+                <div class="col-md-4">
+                    <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden shadow">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="শিশুদের হার্নিয়া কেন হয় এবং এর চিকিৎসা" allowfullscreen></iframe>
+                    </div>
+                    <h5 class="mt-2">শিশুদের হার্নিয়া কেন হয় এবং এর চিকিৎসা</h5>
+                    <p class="text-muted">৫ দিন আগে • ৫.২ হাজার ভিউ</p>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="col-md-4">
+                    <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden shadow">
+                        <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" title="অন্ডকোষে পানি জমার কারণ ও প্রতিকার" allowfullscreen></iframe>
+                    </div>
+                    <h5 class="mt-2">অন্ডকোষে পানি জমার কারণ ও প্রতিকার</h5>
+                    <p class="text-muted">২ সপ্তাহ আগে • ৩.৮ হাজার ভিউ</p>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="col-md-4">
+                    <div class="ratio ratio-16x9 mb-3 rounded overflow-hidden shadow">
+                        <iframe src="https://www.youtube.com/embed/UF8uR6Z6KLc" title="এপেন্ডিসাইটিস কীভাবে চিনবেন?" allowfullscreen></iframe>
+                    </div>
+                    <h5 class="mt-2">এপেন্ডিসাইটিস কীভাবে চিনবেন?</h5>
+                    <p class="text-muted">১ মাস আগে • ৭.৬ হাজার ভিউ</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="https://www.youtube.com/channel/example" target="_blank" class="btn btn-danger btn-lg">
+                    <i class="fab fa-youtube me-2"></i> ইউটিউব চ্যানেল দেখুন
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h6 class="text-primary fw-bold">রোগীদের মতামত</h6>
+                <h2 class="fw-bold">রোগীদের অভিজ্ঞতা</h2>
+                <p class="text-muted">আমাদের সেবা সম্পর্কে রোগীদের মূল্যবান মতামত</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 bg-white">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://z-p3-scontent.fdac3-2.fna.fbcdn.net/v/t39.30808-6/484946145_671114288770467_6381617805097558744_n.jpg?stp=c198.0.1204.1204a_dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeFVrrhGQdZ7fhBo7Ni-AfekUx9pEl052CZTH2kSXTnYJhkLLB-geoTV9xDhCzISZ2bN_nknHvoveR19RYdtNt6t&_nc_ohc=77x2AfEF0D4Q7kNvwGi3-3E&_nc_oc=AdlYLZbY8x_KEpnbNdxxNyuozes-lz_M0fBKTohwj0M5dnjj7HzZMmA53ymY9fDyS24&_nc_zt=23&_nc_ht=z-p3-scontent.fdac3-2.fna&_nc_gid=PuYfkcOgLTnd3Vuji2KuAQ&oh=00_AfIR-yXeO2-ec4D_lHXYjCzTMdP2kWFp13FKpNlr-7p_Vw&oe=682A6BE3" alt="Patient" class="rounded-circle me-3">
+                            <div>
+                                <h5 class="mb-0">কামরুল হাসান</h5>
+                                <small class="text-muted">ঢাকা</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">আমার ছেলের হার্নিয়া অপারেশন ডাঃ আলমগীর স্যার করেছেন। খুব ভালো ফলাফল পেয়েছি। স্যার খুব ভালো ব্যবহার করেন এবং ধৈর্য সহকারে সব বুঝিয়ে বলেন।</p>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 bg-white">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://z-p3-scontent.fdac3-1.fna.fbcdn.net/v/t39.30808-6/485180909_670498402165389_4875333078259978697_n.jpg?stp=c0.132.1200.1200a_dst-jpg_s206x206_tt6&_nc_cat=109&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeH8BpDYLherO8JQgCh2SAqLTPlBmAzHEvNM-UGYDMcS88LXWwUOKkzym324ZnOzy-4FuxdaQ826QYZSdrrJK-Ly&_nc_ohc=1ZmaLccFyJoQ7kNvwFnjLh5&_nc_oc=AdkahD0bAXEknw6xMbfhdQKK5qVQZIWqfITVOgbcKACgT9zh0HYXAIcHmgXJMQXokYQ&_nc_zt=23&_nc_ht=z-p3-scontent.fdac3-1.fna&_nc_gid=6hRAYh67WZ0Cdgt3wEmNeQ&oh=00_AfIYc3joPZ9S5n-yqqs-jlPeZy43QQd3xZKDlCe_O_0HvQ&oe=682A7C23" alt="Patient" class="rounded-circle me-3">
+                            <div>
+                                <h5 class="mb-0">সাবরিনা আকতার</h5>
+                                <small class="text-muted">চট্টগ্রাম</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">আমার ছোট মেয়ের কিডনিতে সমস্যা ছিল। ডাঃ আলমগীর স্যারের কাছে চিকিৎসা নিয়ে এখন সম্পূর্ণ সুস্থ। স্যারকে অসংখ্য ধন্যবাদ।</p>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="col-md-4">
+                    <div class="testimonial-card p-4 bg-white">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://z-p3-scontent.fdac3-2.fna.fbcdn.net/v/t39.30808-6/485177567_670279115520651_2482578051970471405_n.jpg?stp=c0.169.1536.1536a_cp6_dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeHNU2dbEKSIeS1rWwX75JTbLkmT6poL0WwuSZPqmgvRbELwo8Rardt13_hLs088hL7826amUy-qzFzrGcyWOMoL&_nc_ohc=ED_k5uist0sQ7kNvwEb_yTx&_nc_oc=Adm8GaxAZdaNM9lhWtMRn-Eyko3OoADWbJSuQy6rzpVuLxP0AhCaDMAGok0t4HAxc9U&_nc_zt=23&_nc_ht=z-p3-scontent.fdac3-2.fna&_nc_gid=6hRAYh67WZ0Cdgt3wEmNeQ&oh=00_AfKJSGH4zm0WVuwDCqzi6c_VlaII1RR6u85wOvV7uoW6lg&oe=682A7F75" alt="Patient" class="rounded-circle me-3">
+                            <div>
+                                <h5 class="mb-0">রফিকুল ইসলাম</h5>
+                                <small class="text-muted">সিলেট</small>
+                            </div>
+                        </div>
+                        <p class="mb-0">আমার ছেলের অন্ডকোষের সমস্যা ছিল। কয়েকজন ডাক্তার দেখার পর ডাঃ আলমগীর স্যারের কাছে নিয়ে আসি। তার চিকিৎসায় ছেলে এখন সম্পূর্ণ সুস্থ।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h6 class="text-primary fw-bold">সাধারণ জিজ্ঞাসা</h6>
+                <h2 class="fw-bold">প্রায়শই জিজ্ঞাসিত প্রশ্ন</h2>
+                <p class="text-muted">শিশুদের সার্জারি সম্পর্কে সাধারণ প্রশ্নের উত্তর</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- FAQ Item 1 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    শিশুদের হার্নিয়া অপারেশন কি ঝুঁকিপূর্ণ?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    আধুনিক ল্যাপারস্কপিক পদ্ধতিতে শিশুদের হার্নিয়া অপারেশন খুবই নিরাপদ। এতে ব্যথা কম হয়, রিকভারি দ্রুত হয় এবং সার্জারির পরে দাগও খুব কম থাকে। অভিজ্ঞ সার্জন দ্বারা করানো হলে এই অপারেশনে ঝুঁকি নেই বললেই চলে।
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 2 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    অন্ডকোষে পানি জমলে কি অবশ্যই অপারেশন করাতে হবে?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    না, সব ক্ষেত্রে অপারেশন প্রয়োজন হয় না। কিছু ক্ষেত্রে পর্যবেক্ষণে রেখে দেখা যায়। তবে ২ বছরের বেশি বয়সী শিশুদের ক্ষেত্রে এবং পানির পরিমাণ বেশি হলে অপারেশন করানো উচিত। সঠিক সিদ্ধান্তের জন্য শিশু সার্জনের পরামর্শ নেওয়া প্রয়োজন।
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 3 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    শিশুদের এপেন্ডিসাইটিস কীভাবে চিনবেন?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    শিশুদের এপেন্ডিসাইটিসের লক্ষণগুলো হলো: পেটের ডান নিচের অংশে ব্যথা, বমি বমি ভাব বা বমি হওয়া, জ্বর, ক্ষুধামন্দা, এবং চলাফেরা করলে ব্যথা বাড়া। শিশুরা সঠিকভাবে ব্যথার স্থান নির্দেশ করতে না পারায় নির্ণয় করা কঠিন হতে পারে। এসব লক্ষণ দেখা দিলে অবিলম্বে চিকিৎসকের পরামর্শ নেওয়া উচিত।
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 4 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    সুন্নতে খতনার পর কতদিন শিশুকে বিশ্রামে রাখতে হবে?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    আধুনিক পদ্ধতিতে সুন্নতে খতনার পর সাধারণত ৩-৫ দিন বিশ্রাম দেওয়া উচিত। প্রথম ২৪ ঘণ্টা বিশেষ সতর্কতা অবলম্বন করতে হবে। ৭-১০ দিনের মধ্যে শিশু পূর্ণ সুস্থ হয়ে যায়। তবে সম্পূর্ণ সুস্থ হওয়া পর্যন্ত ভারী খেলাধুলা থেকে বিরত রাখতে হবে।
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 5 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    শিশুদের কিডনিতে পাথর হওয়ার কারণ কী?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    শিশুদের কিডনিতে পাথর হওয়ার কারণগুলো হলো: পর্যাপ্ত পানি না পান করা, পুষ্টির অভাব, বংশগত কারণ, কিছু ওষুধের পার্শ্ব প্রতিক্রিয়া, মূত্রনালীর সংক্রমণ ও জন্মগত সমস্যা। নিয়মিত পানি পান, স্বাস্থ্যকর খাবার খাওয়া এবং চিকিৎসকের পরামর্শ অনুযায়ী চলা এই সমস্যা প্রতিরোধে সাহায্য করতে পারে।
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">আপনার শিশুর স্বাস্থ্য আমাদের অগ্রাধিকার</h2>
+            <p class="lead mb-4">আজই অ্যাপয়েন্টমেন্ট নিন ও বিশেষজ্ঞ পরামর্শ গ্রহণ করুন</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a href="tel:+8801750105773" class="btn btn-light btn-lg">
+                            <i class="fas fa-phone-alt me-2"></i> ফোন করুন
+                        </a>
+                        <a href="https://wa.me/+8801750105773" class="btn btn-success btn-lg">
+                            <i class="fab fa-whatsapp me-2"></i> হোয়াটসঅ্যাপ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="text-white mb-4">ডাঃ মোঃ আলমগীর হোসেন</h3>
+                    <p class="text-white-50 mb-4">শিশু সার্জারি বিশেষজ্ঞ, আধুনিক পদ্ধতিতে শিশুদের বিভিন্ন সার্জারি সেবা প্রদান করি।</p>
+                    <div class="social-icons">
+                        <a href="https://www.youtube.com/@alamgirhossain3274" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/+8801750105773" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-4">দ্রুত লিংক</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">হোম</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">বিশেষজ্ঞতা</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">সেবাসমূহ</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">ভিডিও</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">যোগাযোগ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">সেবাসমূহ</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">হার্নিয়া</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">অন্ডকোষ সমস্যা</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">হাইপোস্পাডিয়াস</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">এপেন্ডিসাইটিস</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">সুন্নতে খতনা</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">যোগাযোগ</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2"></i> পপুলার ডায়াগনস্টিক সেন্টার, ঢাকা
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone-alt me-2"></i> +৮৮ ০১৭৫০১০৫৭৭৩
+                        </li>
+                        <li class="mb-3">
+                            <i class="fab fa-whatsapp me-2"></i> +৮৮ ০১৭৫০১০৫৭৭৩
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-2"></i> dr.alamgir@example.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-secondary">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-white-50 mb-0">&copy; ২০২৫ ডাঃ মোঃ আলমগীর হোসেন। সর্বস্বত্ব সংরক্ষিত।</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-white-50 mb-0">
+                        <a href="#" class="text-white-50 text-decoration-none">গোপনীয়তা নীতি</a> | 
+                        <a href="#" class="text-white-50 text-decoration-none">শর্তাবলী</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
